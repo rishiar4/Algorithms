@@ -6,7 +6,7 @@ int main()
     cout << "Enter number of elements" << endl;
     cin >> n;
     int a[n];
-    cout << "Enter elements of array" << endl;
+    cout << "Enter array elements" << endl;
     for (int i = 0; i < n; i++)
     {
         cin >> a[i];
@@ -16,16 +16,11 @@ int main()
     {
         cout << a[i] << " ";
     }
-    cout << "\n";
-    int value;
-    cout << "Enter value to be inserted" << endl;
-    cin >> value;
-    for (int i = n; i >= 0; i--)
+    for (int i = n - 1; i < n; i++)
     {
-        a[i + 1] = a[i];
+        a[i] = a[i + 1];
     }
-    a[0] = value;
-    n = n + 1;
+    n = n - 1;
     cout << "Updated array is" << endl;
     for (int i = 0; i < n; i++)
     {
